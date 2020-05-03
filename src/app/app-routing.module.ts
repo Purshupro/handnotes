@@ -6,14 +6,8 @@ import { CreateNoteComponent } from './feature/create-note/create-note.component
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
-  {
-    path: 'home',
-    component: NotesComponent,
-    children: [
-      { path: '', pathMatch: 'full', redirectTo: '/home' },
-      { path: 'create-note', component: CreateNoteComponent },
-    ],
-  },
+  { path: 'home', component: NotesComponent },
+  { path: 'create-note', component: CreateNoteComponent },
   { path: 'view-note', component: ViewNoteComponent },
 ];
 
