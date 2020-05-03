@@ -1,0 +1,15 @@
+<section class="p-4">
+  <div class="mb-4">
+    <a class="btn btn-primary" routerLink="create-note">Create New Note</a>
+  </div>
+
+  <div *ngFor="let note of notesList" class="card mb-3 w-100" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{note.noteTitle}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{note.createdAt | date: 'medium'}}</h6>
+      <p class="card-text">{{note.noteDescription}}
+      </p>
+      <a href="#" class="card-link">View</a>
+    </div>
+  </div>
+</section>
